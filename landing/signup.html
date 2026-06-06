@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Get started — Licensed.tx</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/">Licensed<span class="brand-dot">.tx</span></a>
+    <a class="btn btn-ghost" href="/">← Back</a>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container" style="max-width: 440px;">
+    <h1 class="h2">Create your account</h1>
+    <p class="muted" id="plan-label">Selected plan: …</p>
+
+    <form id="form" class="card" style="margin-top:16px;">
+      <label class="label" for="name">Name</label>
+      <input id="name" class="input" required />
+
+      <label class="label" for="email">Email</label>
+      <input id="email" class="input" type="email" required />
+
+      <label class="label" for="password">Password</label>
+      <input id="password" class="input" type="password" minlength="8" required />
+
+      <div id="err" class="alert alert-err" style="display:none;"></div>
+
+      <button id="submit" class="btn btn-primary" style="margin-top:20px; width:100%;">Continue to checkout →</button>
+
+      <p class="fine">By continuing you agree we charge the selected plan monthly via Stripe.<br>You can cancel anytime from the billing portal.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">© <span id="year"></span> Licensed.tx</div>
+</footer>
+
+<script>
+  const API = "https://contractor-licensing-api.friggi-isham.workers.dev";
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const params = new URLSearchParams(location.search);
+  const plan = (params.get('plan') || 'pro').toLowerCase();
+  const validPlans = ['starter', 'pro', 'business'];
+  const finalPlan = validPlans.includes(plan) ? plan : 'pro';
+  document.getElementById('plan-label').textContent =
+    'Selected plan: ' + finalPlan.charAt(0).toUpperCase() + finalPlan.slice(1);
+
+  const form = document.getElementById('form');
+  const errBox = document.getElementById('err');
+  const btn = document.getElementById('submit');
+
+  function showError(msg) {
+    errBox.textContent = msg;
+    errBox.style.display = 'block';
+  }
+
+  async function call(path, body, token) {
+    const headers = { 'Content-Type': 'application/json' };
+    if (token) headers['Authorization'] = 'Bearer ' + token;
+    const res = await fetch(API + path, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify(body),
+    });
+    const text = await res.text();
+    let data = {};
+    try { data = text ? JSON.parse(text) : {}; } catch (_) {}
+    if (!res.ok) throw new Error(data.error || ('HTTP ' + res.status));
+    return data;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errBox.style.display = 'none';
+    btn.disabled = true;
+    btn.textContent = 'Creating account…';
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+
+    try {
+      let token;
+      try {
+        const reg = await call('/api/auth/register', { name, email, password });
+        token = reg.token;
+      } catch (regErr) {
+        // Email might already exist — try login
+        if (String(regErr.message).toLowerCase().includes('already')) {
+          const login = await call('/api/auth/login', { email, password });
+          token = login.token;
+        } else {
+          throw regErr;
+        }
+      }
+
+      btn.textContent = 'Redirecting to Stripe…';
+      const checkout = await call('/api/billing/checkout', { plan: finalPlan }, token);
+      window.location.href = checkout.url;
+    } catch (ex) {
+      showError(ex.message || 'Something went wrong. Please try again.');
+      btn.disabled = false;
+      btn.textContent = 'Continue to checkout →';
+    }
+  });
+</script>
+
+</body>
+</html>

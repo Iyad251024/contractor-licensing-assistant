@@ -1,0 +1,156 @@
+{
+  "jurisdiction": "TX_ELECTRICAL",
+  "name": "Texas Electrical Contractor License",
+  "authority": "Texas Department of Licensing and Regulation (TDLR)",
+  "version": "2024.1",
+  "lastReviewed": "2024-10-01",
+  "fees": {
+    "application": 115,
+    "renewal": 100,
+    "lateRenewal": 50,
+    "currency": "USD"
+  },
+  "renewal": {
+    "termMonths": 12,
+    "reminderDaysBefore": [60, 30, 7],
+    "graceDays": 90
+  },
+  "eligibility": {
+    "rules": [
+      {
+        "id": "has_master_electrician",
+        "type": "required",
+        "field": "hasMasterElectrician",
+        "operator": "equals",
+        "value": true,
+        "failMessage": "Texas requires a licensed Master Electrician on staff to qualify the contractor license."
+      },
+      {
+        "id": "master_license_active",
+        "type": "required",
+        "field": "masterLicenseActive",
+        "operator": "equals",
+        "value": true,
+        "failMessage": "The qualifying Master Electrician license must currently be active and in good standing."
+      },
+      {
+        "id": "business_entity",
+        "type": "required",
+        "field": "hasBusinessEntity",
+        "operator": "equals",
+        "value": true,
+        "failMessage": "You must operate as a registered business entity (LLC, corp, partnership, or sole prop) before applying."
+      },
+      {
+        "id": "insurance_minimum",
+        "type": "required",
+        "field": "liabilityCoverage",
+        "operator": "gte",
+        "value": 300000,
+        "failMessage": "TDLR requires at least $300,000 in liability insurance coverage."
+      },
+      {
+        "id": "no_felony_block",
+        "type": "warning",
+        "field": "hasFelonyConviction",
+        "operator": "equals",
+        "value": false,
+        "failMessage": "A felony conviction does not automatically disqualify, but TDLR will require disclosure and review."
+      }
+    ]
+  },
+  "requiredDocuments": [
+    {
+      "key": "master_electrician_license",
+      "label": "Master Electrician license (qualifying individual)",
+      "accepts": ["pdf", "jpg", "png"],
+      "maxMb": 10
+    },
+    {
+      "key": "coi",
+      "label": "Certificate of Insurance ($300k+ liability)",
+      "accepts": ["pdf"],
+      "maxMb": 10
+    },
+    {
+      "key": "ein_letter",
+      "label": "IRS EIN confirmation letter",
+      "accepts": ["pdf"],
+      "maxMb": 5
+    },
+    {
+      "key": "entity_formation",
+      "label": "Texas Secretary of State formation document",
+      "accepts": ["pdf"],
+      "maxMb": 5
+    },
+    {
+      "key": "assumed_name_cert",
+      "label": "Assumed Name Certificate (DBA, if applicable)",
+      "accepts": ["pdf"],
+      "maxMb": 5,
+      "conditional": { "field": "usesDba", "equals": true }
+    }
+  ],
+  "roadmap": [
+    {
+      "key": "confirm_master_electrician",
+      "title": "Confirm qualifying Master Electrician",
+      "description": "Identify the Master Electrician who will qualify the contractor license. They must be a W-2 employee or owner.",
+      "order": 1
+    },
+    {
+      "key": "form_business_entity",
+      "title": "Form a Texas business entity",
+      "description": "Register an LLC or corp with the Texas Secretary of State, or confirm your existing entity is in good standing.",
+      "order": 2,
+      "skipIf": { "field": "hasBusinessEntity", "equals": true }
+    },
+    {
+      "key": "obtain_ein",
+      "title": "Obtain EIN from IRS",
+      "description": "Free, online, ~10 minutes. Required for the application.",
+      "order": 3,
+      "skipIf": { "field": "hasEin", "equals": true }
+    },
+    {
+      "key": "purchase_insurance",
+      "title": "Purchase liability insurance ($300k+)",
+      "description": "Get a Certificate of Insurance naming TDLR as certificate holder.",
+      "order": 4
+    },
+    {
+      "key": "upload_documents",
+      "title": "Upload required documents",
+      "description": "Master license, COI, EIN letter, entity formation doc.",
+      "order": 5
+    },
+    {
+      "key": "pay_application_fee",
+      "title": "Pay $115 application fee",
+      "description": "Paid directly to TDLR at submission.",
+      "order": 6
+    },
+    {
+      "key": "submit_to_tdlr",
+      "title": "Submit application packet to TDLR",
+      "description": "We generate the packet; you file via TDLR online portal or mail.",
+      "order": 7
+    },
+    {
+      "key": "await_decision",
+      "title": "Await TDLR decision (typically 2–4 weeks)",
+      "description": "Track status; respond to any TDLR requests for additional info.",
+      "order": 8
+    }
+  ],
+  "wizardQuestions": [
+    { "id": "hasMasterElectrician", "label": "Do you have a licensed Master Electrician on staff (or are you one)?", "type": "boolean" },
+    { "id": "masterLicenseActive", "label": "Is the Master Electrician's TX license currently active?", "type": "boolean" },
+    { "id": "hasBusinessEntity", "label": "Do you have a registered business entity (LLC, corp, etc.)?", "type": "boolean" },
+    { "id": "hasEin", "label": "Do you already have an EIN?", "type": "boolean" },
+    { "id": "liabilityCoverage", "label": "How much liability insurance coverage do you carry (USD)?", "type": "number" },
+    { "id": "usesDba", "label": "Will you operate under a DBA / assumed name?", "type": "boolean" },
+    { "id": "hasFelonyConviction", "label": "Any felony convictions to disclose?", "type": "boolean" }
+  ]
+}

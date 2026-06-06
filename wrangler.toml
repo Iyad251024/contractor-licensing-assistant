@@ -1,0 +1,27 @@
+name = "contractor-licensing-api"
+main = "src/backend/workers/api.worker.ts"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+account_id = "1f110b31233d9ce8561f0fce5aa2093b"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "contractor_licensing"
+database_id = "e3489c29-1ece-412d-9a42-5da49a6fba73"
+migrations_dir = "src/backend/db/migrations"
+
+[[r2_buckets]]
+binding = "DOCS"
+bucket_name = "contractor-licensing-docs"
+
+[vars]
+APP_URL = "https://contractor-licensing.pages.dev"
+JURISDICTION = "TX_ELECTRICAL"
+
+# Secrets (set via `wrangler secret put`):
+#   JWT_SECRET
+#   STRIPE_SECRET_KEY
+#   STRIPE_WEBHOOK_SECRET
+#   STRIPE_PRICE_STARTER
+#   STRIPE_PRICE_PRO
+#   STRIPE_PRICE_BUSINESS
