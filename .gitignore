@@ -1,5 +1,6 @@
 node_modules/
 .next/
+src/frontend/out/
 .wrangler/
 .dev.vars
 .env
