@@ -1,137 +1,733 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Texas Electrical Contractor License — Licensed.tx</title>
-<meta name="description" content="Get your Texas Electrical Contractor License without hiring a $3,000 consultant. Eligibility check, personalized roadmap, document vault, application tracking, renewal reminders." />
-<link rel="stylesheet" href="/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Licensed.tx — Texas Electrical Contractor License Platform</title>
+  <meta name="description" content="Get your Texas Electrical Contractor License without missing a single requirement. Structured workflow, document management, and TDLR-based guidance.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- NAV -->
 <nav class="nav">
   <div class="container nav-inner">
     <a class="brand" href="/">Licensed<span class="brand-dot">.tx</span></a>
-    <div style="display:flex; gap:12px;">
-      <a class="btn btn-ghost" href="#pricing">Pricing</a>
-      <a class="btn btn-primary" href="/signup.html?plan=pro">Get started</a>
+    <div class="nav-links">
+      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="/login" class="btn btn-ghost btn-sm">Sign in</a>
+      <a href="/eligibility" class="btn btn-primary btn-sm">Check Eligibility Free</a>
     </div>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="container">
-    <span class="eyebrow">Texas Electrical Contractor License</span>
-    <h1 class="h1">Get your Texas Electrical Contractor License without hiring a $3,000 consultant.</h1>
-    <p class="lead">Stop guessing requirements and wasting weeks on paperwork. We guide you step-by-step from eligibility check to TDLR approval — for less than a single consultant hour.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="/signup.html?plan=starter">Check eligibility free →</a>
-      <a class="btn btn-ghost" href="#pricing">See pricing</a>
+    <div class="hero-grid">
+
+      <div class="hero-content">
+        <span class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Texas Electrical Contractor License
+        </span>
+        <h1 class="h1">
+          Get Your Texas Electrical Contractor License Without Missing a Single Requirement
+        </h1>
+        <p class="lead">
+          Stop guessing TDLR requirements and wasting weeks on paperwork.
+          Licensed.tx walks you through every step — from eligibility check to approved license.
+        </p>
+        <div class="cta-row">
+          <a href="/eligibility" class="btn btn-primary btn-lg">Check Eligibility Free →</a>
+          <a href="#how-it-works" class="btn btn-ghost btn-lg">See How It Works</a>
+        </div>
+        <p class="fine" style="margin-top:16px;">No credit card required. Takes 2 minutes.</p>
+        <div class="hero-trust">
+          <span class="trust-item"><span class="check-icon">✓</span> Based on official TDLR requirements</span>
+          <span class="trust-item"><span class="check-icon">✓</span> Replaces $2,000–$8,000 consultants</span>
+        </div>
+      </div>
+
+      <div class="hero-mockup">
+        <div class="mockup-card">
+          <div class="mockup-header">
+            <div>
+              <span class="mockup-title">License Readiness</span>
+              <span class="mockup-subtitle">Texas Electrical Contractor</span>
+            </div>
+            <span class="badge badge-warning">In Progress</span>
+          </div>
+
+          <div class="readiness-score-block">
+            <div class="readiness-score-row">
+              <span class="score-label">Readiness Score</span>
+              <span class="score-value">78%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:78%"></div>
+            </div>
+          </div>
+
+          <div class="mockup-section-title">Requirements</div>
+          <div class="requirement-list">
+            <div class="req-item req-done"><span class="req-icon">✓</span><span class="req-text">Experience Verified</span></div>
+            <div class="req-item req-done"><span class="req-icon">✓</span><span class="req-text">Business Entity Created</span></div>
+            <div class="req-item req-done"><span class="req-icon">✓</span><span class="req-text">Master Electrician License</span></div>
+            <div class="req-item req-warn"><span class="req-icon req-icon-warn">⚠</span><span class="req-text">Insurance Certificate Missing</span></div>
+            <div class="req-item req-warn"><span class="req-icon req-icon-warn">⚠</span><span class="req-text">EIN Letter Missing</span></div>
+          </div>
+
+          <div class="mockup-section-title" style="margin-top:16px;">Roadmap Progress</div>
+          <div class="roadmap-list">
+            <div class="roadmap-step step-done">
+              <div class="step-indicator step-done-indicator">✓</div>
+              <span>Step 1 — Eligibility Confirmed</span>
+            </div>
+            <div class="roadmap-step step-done">
+              <div class="step-indicator step-done-indicator">✓</div>
+              <span>Step 2 — Business Entity</span>
+            </div>
+            <div class="roadmap-step step-active">
+              <div class="step-indicator step-active-indicator">3</div>
+              <span>Step 3 — Document Collection</span>
+            </div>
+            <div class="roadmap-step step-pending">
+              <div class="step-indicator step-pending-indicator">4</div>
+              <span>Final Submission</span>
+            </div>
+          </div>
+
+          <div class="mockup-status-bar">
+            <span class="status-label">Application Status</span>
+            <span class="badge badge-blue">Preparing Submission</span>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <p class="fine">No credit card required for the eligibility check.</p>
   </div>
 </section>
 
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-number">$2,000–$8,000</span>
+        <span class="stat-desc">What consultants charge</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">4–12 weeks</span>
+        <span class="stat-desc">Lost to TDLR back-and-forth</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">1 missing form</span>
+        <span class="stat-desc">All it takes to restart the clock</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- READINESS CHECK -->
+<section class="section section-alt" id="readiness-check">
+  <div class="container">
+    <span class="section-label">Free Tool</span>
+    <h2 class="h2 centered">Free Texas Electrical License<br>Readiness Check</h2>
+    <p class="lead centered" style="margin:0 auto 48px;">
+      Answer 5 questions and instantly discover if you're eligible, what's missing, and what to do next.
+    </p>
+
+    <div class="readiness-check-layout">
+      <div class="readiness-questions">
+
+        <div class="check-question active-question">
+          <div class="q-number">1</div>
+          <div class="q-content">
+            <div class="q-text">How many years of electrical experience do you have?</div>
+            <div class="q-options">
+              <div class="q-option">Less than 2 years</div>
+              <div class="q-option">2–4 years</div>
+              <div class="q-option q-option-selected">4+ years ✓</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="check-question">
+          <div class="q-number">2</div>
+          <div class="q-content">
+            <div class="q-text">Do you hold a Master Electrician License?</div>
+            <div class="q-options">
+              <div class="q-option q-option-selected">Yes ✓</div>
+              <div class="q-option">No</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="check-question">
+          <div class="q-number">3</div>
+          <div class="q-content">
+            <div class="q-text">Is your business entity registered?</div>
+            <div class="q-options">
+              <div class="q-option q-option-selected">Yes ✓</div>
+              <div class="q-option">No — I need help</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="check-question check-question-pending">
+          <div class="q-number">4</div>
+          <div class="q-content">
+            <div class="q-text">Have you obtained your certificate of insurance?</div>
+            <div class="q-options">
+              <div class="q-option">Yes</div>
+              <div class="q-option">Not yet</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="check-question check-question-pending">
+          <div class="q-number">5</div>
+          <div class="q-content">
+            <div class="q-text">Is your EIN letter available?</div>
+            <div class="q-options">
+              <div class="q-option">Yes</div>
+              <div class="q-option">No</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="readiness-output">
+        <div class="output-card">
+          <div class="output-score-row">
+            <div>
+              <div class="output-score-label">Your Readiness Score</div>
+              <div class="output-score-value">82%</div>
+            </div>
+            <svg viewBox="0 0 36 36" width="80" height="80">
+              <circle cx="18" cy="18" r="15.9" fill="none" stroke="#e5e7eb" stroke-width="3"/>
+              <circle cx="18" cy="18" r="15.9" fill="none" stroke="#2563eb" stroke-width="3"
+                stroke-dasharray="82 18" stroke-dashoffset="25" stroke-linecap="round"/>
+              <text x="18" y="21" text-anchor="middle" font-size="8" font-weight="700" fill="#0b1220">82%</text>
+            </svg>
+          </div>
+
+          <div class="output-section">
+            <div class="output-section-title missing">Missing Requirements</div>
+            <div class="output-item output-item-warn"><span>⚠</span> Insurance Certificate</div>
+            <div class="output-item output-item-warn"><span>⚠</span> EIN Letter</div>
+          </div>
+
+          <div class="output-section">
+            <div class="output-section-title next-step">Next Step</div>
+            <div class="output-next-step">
+              Obtain your certificate of insurance before submitting your application package.
+            </div>
+          </div>
+
+          <a href="/eligibility" class="btn btn-primary" style="width:100%;margin-top:20px;">
+            Get My Full Readiness Report →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY APPLICATIONS GET DELAYED -->
+<section class="section">
+  <div class="container">
+    <span class="section-label">Common Mistakes</span>
+    <h2 class="h2 centered">What Delays Most License Applications?</h2>
+    <p class="lead centered" style="margin:0 auto 48px;">
+      Most rejections come from avoidable paperwork errors, not qualifications.
+    </p>
+    <div class="grid-3">
+      <div class="card delay-card">
+        <div class="delay-icon">📋</div>
+        <h3 class="h3">Missing Experience Affidavits</h3>
+        <p class="muted">TDLR requires specific documentation of supervised experience. Generic references don't qualify.</p>
+      </div>
+      <div class="card delay-card">
+        <div class="delay-icon">📄</div>
+        <h3 class="h3">Incorrect Insurance Documentation</h3>
+        <p class="muted">Wrong coverage amounts, missing endorsements, or expired certificates cause instant rejections.</p>
+      </div>
+      <div class="card delay-card">
+        <div class="delay-icon">🏢</div>
+        <h3 class="h3">Missing Business Registration</h3>
+        <p class="muted">Your business entity must be properly registered before TDLR will process the application.</p>
+      </div>
+      <div class="card delay-card">
+        <div class="delay-icon">📦</div>
+        <h3 class="h3">Incomplete Application Packages</h3>
+        <p class="muted">One missing form sends your entire submission back. TDLR won't process partial packages.</p>
+      </div>
+      <div class="card delay-card">
+        <div class="delay-icon">⏰</div>
+        <h3 class="h3">Late Renewal Documentation</h3>
+        <p class="muted">Missing renewal deadlines can trigger license lapse, requiring a full re-application process.</p>
+      </div>
+      <div class="card delay-card delay-card-highlight">
+        <div class="delay-icon">✅</div>
+        <h3 class="h3" style="color:var(--brand);">Licensed.tx catches all of this</h3>
+        <p class="muted">We identify these issues before you submit, so you get approved the first time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES GRID (OUTCOME-FOCUSED) -->
+<section class="section section-alt" id="features">
+  <div class="container">
+    <span class="section-label">Platform Features</span>
+    <h2 class="h2 centered">Everything You Need to Get Licensed</h2>
+    <p class="lead centered" style="margin:0 auto 48px;">
+      Built specifically around TDLR's Texas Electrical Contractor requirements.
+    </p>
+    <div class="grid-3">
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3 class="h3">Know if you're eligible before spending time and money.</h3>
+        <p class="muted">Answer 6 questions based on actual TDLR criteria. Get a clear yes/no in under 2 minutes.</p>
+        <span class="feature-tag">Eligibility Assessment</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🗺️</div>
+        <h3 class="h3">Get a personalized licensing plan.</h3>
+        <p class="muted">We generate the exact ordered checklist for your specific situation — no generic templates.</p>
+        <span class="feature-tag">Licensing Roadmap</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🗂️</div>
+        <h3 class="h3">Never lose required paperwork.</h3>
+        <p class="muted">Secure vault for your Master Electrician license, COI, EIN letter, and all supporting docs.</p>
+        <span class="feature-tag">Document Vault</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3 class="h3">Track every step until approval.</h3>
+        <p class="muted">Real-time status from draft through TDLR submission. Know exactly where you stand.</p>
+        <span class="feature-tag">Application Tracking</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔔</div>
+        <h3 class="h3">Avoid accidental license expiration.</h3>
+        <p class="muted">Automatic 60, 30, and 7-day renewal reminders. Never lose your license to a missed deadline.</p>
+        <span class="feature-tag">Renewal Reminders</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚖️</div>
+        <h3 class="h3">Built on official TDLR requirements.</h3>
+        <p class="muted">Our rules engine reflects actual TDLR regulations — updated when requirements change, not when someone remembers.</p>
+        <span class="feature-tag">TDLR Rules Engine</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section" id="how-it-works">
+  <div class="container">
+    <span class="section-label">Step by Step</span>
+    <h2 class="h2 centered">Your Licensing Journey</h2>
+    <p class="lead centered" style="margin:0 auto 48px;">
+      A clear path from eligibility check to approved license — no guesswork.
+    </p>
+    <div class="timeline">
+
+      <div class="timeline-step">
+        <div class="timeline-indicator">
+          <div class="timeline-dot timeline-dot-done">✓</div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-step-number">Step 1</div>
+          <h3 class="timeline-title">Eligibility Check</h3>
+          <p class="timeline-desc">Answer 6 questions based on official TDLR criteria. Instantly know if you qualify and what's missing.</p>
+          <span class="timeline-time">~2 minutes</span>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="timeline-indicator">
+          <div class="timeline-dot timeline-dot-done">✓</div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-step-number">Step 2</div>
+          <h3 class="timeline-title">Experience Verification</h3>
+          <p class="timeline-desc">Document your electrical work history with the required affidavits and reference letters TDLR expects.</p>
+          <span class="timeline-time">1–2 days</span>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="timeline-indicator">
+          <div class="timeline-dot timeline-dot-active">3</div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-step-number">Step 3</div>
+          <h3 class="timeline-title">Document Collection</h3>
+          <p class="timeline-desc">Gather and organize your insurance certificate, business registration, EIN letter, and supporting documents.</p>
+          <span class="timeline-time">3–7 days</span>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="timeline-indicator">
+          <div class="timeline-dot timeline-dot-pending">4</div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-step-number">Step 4</div>
+          <h3 class="timeline-title">Application Package</h3>
+          <p class="timeline-desc">Our application builder assembles your complete package. Optional expert review before submission.</p>
+          <span class="timeline-time">1–2 days</span>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="timeline-indicator">
+          <div class="timeline-dot timeline-dot-pending">5</div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-step-number">Step 5</div>
+          <h3 class="timeline-title">TDLR Submission</h3>
+          <p class="timeline-desc">Submit your verified, complete application package to TDLR. Track status in real time.</p>
+          <span class="timeline-time">Same day</span>
+        </div>
+      </div>
+
+      <div class="timeline-step timeline-step-last">
+        <div class="timeline-indicator">
+          <div class="timeline-dot timeline-dot-pending" style="font-size:16px;">🏆</div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-step-number">Final Step</div>
+          <h3 class="timeline-title">License Approval</h3>
+          <p class="timeline-desc">TDLR reviews and approves your application. Your Texas Electrical Contractor License is issued.</p>
+          <span class="badge-success-sm">Approved ✓</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SECTION -->
 <section class="section section-alt">
   <div class="container">
-    <h2 class="h2">The problem isn't your skill. It's the paperwork.</h2>
-    <p class="lead">Getting licensed in Texas isn't hard because the work is hard — it's hard because the requirements are scattered, the forms ambiguous, and one missing document sends you back to square one.</p>
-    <div class="grid-3" style="margin-top:32px;">
-      <div class="card">
-        <h3 class="h3">$2,000 – $8,000</h3>
-        <p class="muted" style="margin:0;">What licensing consultants charge for what's mostly checklist work.</p>
+    <div class="trust-layout">
+      <div class="trust-content">
+        <span class="section-label">Official Requirements</span>
+        <h2 class="h2">Built Around Official Texas Requirements</h2>
+        <p class="lead">
+          Licensed.tx is designed specifically around publicly available Texas Department of
+          Licensing and Regulation (TDLR) requirements. We help organize the process,
+          documentation, and milestones required to obtain a Texas Electrical Contractor License.
+        </p>
+        <div class="trust-bullets">
+          <div class="trust-bullet">
+            <span class="trust-check">✓</span>
+            <div>
+              <strong>Texas Electrical Contractor License workflow</strong>
+              <p class="muted">Every step matches TDLR's official licensing process.</p>
+            </div>
+          </div>
+          <div class="trust-bullet">
+            <span class="trust-check">✓</span>
+            <div>
+              <strong>Insurance requirements guidance</strong>
+              <p class="muted">Exact coverage amounts and documentation formats TDLR requires.</p>
+            </div>
+          </div>
+          <div class="trust-bullet">
+            <span class="trust-check">✓</span>
+            <div>
+              <strong>Business registration guidance</strong>
+              <p class="muted">Entity requirements before TDLR will process your application.</p>
+            </div>
+          </div>
+          <div class="trust-bullet">
+            <span class="trust-check">✓</span>
+            <div>
+              <strong>Renewal tracking</strong>
+              <p class="muted">Automatic reminders so your license never lapses.</p>
+            </div>
+          </div>
+          <div class="trust-bullet">
+            <span class="trust-check">✓</span>
+            <div>
+              <strong>Document organization</strong>
+              <p class="muted">Secure vault for every required document, organized by requirement.</p>
+            </div>
+          </div>
+        </div>
+        <div class="disclaimer">
+          <span>ℹ️</span>
+          Licensed.tx is not affiliated with the Texas Department of Licensing and Regulation.
+        </div>
       </div>
-      <div class="card">
-        <h3 class="h3">4 – 12 weeks</h3>
-        <p class="muted" style="margin:0;">Typical time lost to TDLR back-and-forth when a document is missing or wrong.</p>
-      </div>
-      <div class="card">
-        <h3 class="h3">1 missing form</h3>
-        <p class="muted" style="margin:0;">All it takes to restart the clock. We make sure that doesn't happen.</p>
+
+      <div class="trust-visual">
+        <div class="tdlr-card">
+          <div class="tdlr-header">
+            <span class="tdlr-badge">TDLR Requirements</span>
+          </div>
+          <div class="tdlr-checklist">
+            <div class="tdlr-item"><span class="tdlr-check">✓</span><span>Master Electrician License (active)</span></div>
+            <div class="tdlr-item"><span class="tdlr-check">✓</span><span>4+ years supervised experience</span></div>
+            <div class="tdlr-item"><span class="tdlr-check">✓</span><span>Business entity registration</span></div>
+            <div class="tdlr-item"><span class="tdlr-check">✓</span><span>Certificate of insurance ($500K)</span></div>
+            <div class="tdlr-item"><span class="tdlr-check">✓</span><span>EIN / Federal Tax ID letter</span></div>
+            <div class="tdlr-item"><span class="tdlr-check">✓</span><span>Application fee payment</span></div>
+            <div class="tdlr-item"><span class="tdlr-check">✓</span><span>Experience affidavits</span></div>
+          </div>
+          <div class="tdlr-source">Source: TDLR Electrical Contractor requirements</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- WHO IS THIS FOR -->
 <section class="section">
   <div class="container">
-    <h2 class="h2">A step-by-step system that replaces the consultant.</h2>
-    <p class="lead">Built around the actual TDLR Electrical Contractor process. No fluff, no upsells.</p>
-    <div class="grid-2" style="margin-top:32px;">
-      <div class="card"><h3 class="h3">1. Eligibility check</h3><p class="muted">Answer 6 questions. We tell you immediately whether you qualify under current TDLR rules.</p></div>
-      <div class="card"><h3 class="h3">2. Personalized roadmap</h3><p class="muted">We generate the exact ordered checklist for your situation — no generic templates.</p></div>
-      <div class="card"><h3 class="h3">3. Document vault</h3><p class="muted">Upload your Master Electrician license, COI, EIN letter — all stored securely.</p></div>
-      <div class="card"><h3 class="h3">4. Application tracking</h3><p class="muted">Track status from draft through TDLR submission and approval.</p></div>
-      <div class="card"><h3 class="h3">5. Renewal reminders</h3><p class="muted">Automatic 60/30/7-day reminders before your license expires. Never lose your license again.</p></div>
-      <div class="card"><h3 class="h3">6. Built on TDLR rules, not guesses</h3><p class="muted">Our rules engine is updated when TDLR changes the rules — not when a consultant remembers to update their template.</p></div>
+    <span class="section-label">Who It's For</span>
+    <h2 class="h2 centered">Who Uses Licensed.tx?</h2>
+    <p class="lead centered" style="margin:0 auto 48px;">
+      Built for Texas electricians at every stage of their licensing journey.
+    </p>
+    <div class="grid-3">
+      <div class="audience-card">
+        <div class="audience-icon">⚡</div>
+        <h3 class="h3">Independent Electricians</h3>
+        <p class="muted">Get licensed without paying expensive consultants. A structured process that replaces the $2,000–$8,000 consulting fee.</p>
+        <a href="/eligibility" class="audience-link">Check eligibility →</a>
+      </div>
+      <div class="audience-card audience-card-featured">
+        <span class="audience-badge">Most Common</span>
+        <div class="audience-icon">🏗️</div>
+        <h3 class="h3">New Electrical Businesses</h3>
+        <p class="muted">Launch your contracting business faster with a structured licensing process designed for new entrants.</p>
+        <a href="/eligibility" class="audience-link">Start your process →</a>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">🏢</div>
+        <h3 class="h3">Established Contractors</h3>
+        <p class="muted">Manage renewals, compliance tracking, and multi-employee licensing from a single dashboard.</p>
+        <a href="#pricing" class="audience-link">See Business plan →</a>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- PRICING -->
 <section class="section section-alt" id="pricing">
   <div class="container">
-    <h2 class="h2">Simple, honest pricing.</h2>
-    <p class="lead" style="margin-bottom:32px;">A single month costs less than 30 minutes of a licensing consultant's time.</p>
-    <div class="pricing">
+    <span class="section-label">Pricing</span>
+    <h2 class="h2 centered">Simple, Transparent Pricing</h2>
+    <p class="lead centered" style="margin:0 auto 40px;">No subscription required to get licensed.</p>
 
-      <div class="price-card">
-        <h3 class="h3">Starter</h3>
-        <p class="muted" style="margin:0 0 16px;">Find out if you're ready</p>
-        <div class="price-amount">$29<small> /month</small></div>
+    <div class="pricing-comparison-bar">
+      <div class="comparison-item comparison-bad">
+        <div class="comparison-label">Hiring a consultant</div>
+        <div class="comparison-price">$2,000–$8,000</div>
+      </div>
+      <div class="comparison-vs">vs</div>
+      <div class="comparison-item comparison-good">
+        <div class="comparison-label">Licensed.tx</div>
+        <div class="comparison-price">Starting at $299</div>
+      </div>
+      <div class="comparison-savings">
+        <div class="savings-label">Potential savings</div>
+        <div class="savings-value">Thousands of dollars</div>
+      </div>
+    </div>
+
+    <div class="pricing-grid">
+
+      <div class="price-card price-card-featured">
+        <div class="price-tag-row">
+          <span class="price-tag">For Individuals</span>
+        </div>
+        <h3 class="h3">Texas License Package</h3>
+        <p class="price-tagline">Perfect for independent electricians getting licensed once.</p>
+        <div class="price-display">
+          <span class="price-amount-new">$299</span>
+          <span class="price-type">one-time payment</span>
+        </div>
         <ul class="price-list">
-          <li>Eligibility checker</li>
-          <li>TDLR rule explanations</li>
-          <li>Save your answers</li>
+          <li>Eligibility Assessment</li>
+          <li>Personalized Licensing Roadmap</li>
+          <li>Document Vault</li>
+          <li>Application Builder</li>
+          <li>Progress Tracking</li>
+          <li>Texas Licensing Checklist</li>
+          <li><strong>Access until license approval</strong></li>
         </ul>
-        <a class="btn btn-primary" style="width:100%;" href="/signup.html?plan=starter">Start Starter</a>
+        <div class="price-addon">
+          <div class="addon-header">Optional Add-on</div>
+          <div class="addon-item">
+            <span>Application Review</span>
+            <span class="addon-price">+$99</span>
+          </div>
+          <p class="addon-desc">Expert review of your complete package before submission</p>
+        </div>
+        <a href="/login?plan=individual" class="btn btn-primary" style="width:100%;">
+          Get Licensed →
+        </a>
       </div>
 
-      <div class="price-card popular">
-        <span class="price-badge">Most popular</span>
-        <h3 class="h3">Pro</h3>
-        <p class="muted" style="margin:0 0 16px;">Get licensed</p>
-        <div class="price-amount">$79<small> /month</small></div>
-        <ul class="price-list">
-          <li>Everything in Starter</li>
-          <li>Personalized roadmap</li>
-          <li>Document vault</li>
-          <li>Application builder</li>
-          <li>Status tracking</li>
-        </ul>
-        <a class="btn btn-primary" style="width:100%;" href="/signup.html?plan=pro">Start Pro</a>
-      </div>
-
       <div class="price-card">
-        <h3 class="h3">Business</h3>
-        <p class="muted" style="margin:0 0 16px;">Multi-license operations</p>
-        <div class="price-amount">$199<small> /month</small></div>
+        <div class="price-tag-row">
+          <span class="price-tag price-tag-business">For Companies</span>
+        </div>
+        <h3 class="h3">Business Plan</h3>
+        <p class="price-tagline">Ongoing compliance for electrical companies.</p>
+        <div class="price-display">
+          <span class="price-amount-new">$99</span>
+          <span class="price-type">/month</span>
+        </div>
         <ul class="price-list">
-          <li>Everything in Pro</li>
-          <li>Up to 5 team seats</li>
-          <li>Renewal reminders</li>
-          <li>Multi-license tracking</li>
+          <li>Everything in Texas License Package</li>
+          <li>Multiple Employee Licenses</li>
+          <li>License Expiration Tracking</li>
+          <li>Renewal Reminders</li>
+          <li>Multi-License Dashboard</li>
+          <li>Team Management</li>
+          <li>Compliance Monitoring</li>
         </ul>
-        <a class="btn btn-primary" style="width:100%;" href="/signup.html?plan=business">Start Business</a>
+        <a href="/login?plan=business" class="btn btn-ghost" style="width:100%;margin-top:auto;">
+          Start Business Plan
+        </a>
       </div>
 
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container centered">
-    <h2 class="h2">Stop losing weeks on paperwork. Get licensed faster.</h2>
-    <p class="lead" style="margin: 0 auto 28px;">Start with a free eligibility check. No credit card required.</p>
-    <a class="btn btn-primary" href="/signup.html?plan=starter">Check eligibility →</a>
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <span class="section-label">Questions</span>
+    <h2 class="h2 centered">Frequently Asked Questions</h2>
+    <p class="lead centered" style="margin:0 auto 48px;">
+      Common questions about Licensed.tx and the Texas Electrical Contractor licensing process.
+    </p>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary class="faq-question">Do I still need a consultant?</summary>
+        <div class="faq-answer">
+          No. Licensed.tx replaces the need for a licensing consultant for most Texas Electrical Contractor applications.
+          The platform guides you through every TDLR requirement, helps you collect the right documents, and builds your
+          application package. Consultants typically charge $2,000–$8,000 for this work.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">How does Licensed.tx differ from a consultant?</summary>
+        <div class="faq-answer">
+          A consultant handles your application manually, charges thousands of dollars, and you have no visibility into
+          the process. Licensed.tx gives you a self-service platform built on official TDLR requirements — you stay in
+          control, move faster, and pay a fraction of the cost. You can track every step and access your documents anytime.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Is this an official government service?</summary>
+        <div class="faq-answer">
+          No. Licensed.tx is a private software platform and is not affiliated with, endorsed by, or connected to the
+          Texas Department of Licensing and Regulation (TDLR) or any government agency. We help you organize and prepare
+          your application using publicly available TDLR requirements.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">How accurate are the requirements?</summary>
+        <div class="faq-answer">
+          Our requirements are based on publicly available TDLR documentation. We update our rules engine when TDLR changes
+          their requirements. You should always verify final requirements directly with TDLR before submission, as regulations
+          can change. We help you get it right — but the official source is always TDLR.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">What if I'm not eligible?</summary>
+        <div class="faq-answer">
+          If the eligibility check shows you don't currently qualify, we'll tell you exactly what's missing and what steps
+          to take. This saves you from submitting a premature application that TDLR will reject. If you purchased the Texas
+          License Package and are not eligible, contact us for a full refund.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Can I cancel the Business Plan?</summary>
+        <div class="faq-answer">
+          Yes. The Business Plan is a monthly subscription you can cancel at any time. Your access continues through the end
+          of your billing period. The Texas License Package is a one-time payment with lifetime access until your license
+          is approved.
+        </div>
+      </details>
+
+    </div>
   </div>
 </section>
 
+<!-- FINAL CTA -->
+<section class="section section-cta">
+  <div class="container centered">
+    <h2 class="h2">Ready to get your Texas Electrical Contractor License?</h2>
+    <p class="lead" style="margin:0 auto 28px;">
+      Start with a free eligibility check. Takes 2 minutes. No credit card required.
+    </p>
+    <div class="cta-row" style="justify-content:center;">
+      <a href="/eligibility" class="btn btn-primary btn-lg">Check Eligibility Free →</a>
+      <a href="#pricing" class="btn btn-ghost-light btn-lg">View Pricing</a>
+    </div>
+    <p class="fine" style="margin-top:20px;color:rgba(255,255,255,0.45);">
+      ✓ Based on official TDLR requirements &nbsp;·&nbsp; ✓ Not a consultant &nbsp;·&nbsp; ✓ Starting at $299
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    © <span id="year"></span> Licensed.tx · Not affiliated with the Texas Department of Licensing and Regulation.
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="/">Licensed<span class="brand-dot">.tx</span></a>
+        <p class="footer-tagline">Texas Electrical Contractor Licensing Platform</p>
+        <p class="footer-disclaimer">Not affiliated with the Texas Department of Licensing and Regulation.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title">Platform</div>
+          <a href="/eligibility">Eligibility Check</a>
+          <a href="/login">Sign In</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Resources</div>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Licensed.tx &nbsp;·&nbsp; <a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/terms">Terms</a>
+    </div>
   </div>
 </footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 </body>
 </html>
