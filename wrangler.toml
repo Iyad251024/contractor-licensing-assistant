@@ -1,4 +1,4 @@
-name = "contractor-licensing-api"
+name = "contractor-licensing-assistant"
 main = "src/backend/workers/api.worker.ts"
 compatibility_date = "2024-11-01"
 compatibility_flags = ["nodejs_compat"]
